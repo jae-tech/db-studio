@@ -421,3 +421,9 @@ Electron E2E는 실제 async OS 암호화/SQLite/연결 CRUD/암호·호스트 �
 - 연결 계정이 접근 가능한 DB를 SQL 편집기 후보로 제시하고 `DB.` → 스키마, `DB.스키마.` → 테이블, 세 부분 이름의 별칭 `a.` → 대상 DB 열을 완성한다. 맨 앞의 세 부분 테이블 참조는 기존처럼 `SELECT * FROM`을 자동으로 붙인다.
 - Main의 기존 탐색/테이블 설명 IPC에 선택적 DB 범위를 더했다. 다른 DB는 접근 가능 목록에서 재검증하고 인용된 해당 DB `sys` 카탈로그만 읽는다. 연결 DB, 쿼리 실행·쓰기 정책, AI/MCP 현재 DB 범위는 변경하지 않았다.
 - 검증: typecheck, lint, unit 397 통과, build, Electron E2E 28 통과/실DB·AI opt-in 8 skip, format 통과. 기본 integration은 로컬 3 통과/실DB 등 13 skip. SQL Server 실계정의 다른 DB 메타데이터 조회는 이번 환경에서 미실행이며 opt-in 통합 검증 항목으로 남겼다.
+
+## 2026-11-03 — 공개 README 재작성
+
+- 기능 나열형 단락을 설치·주요 기능·단축키·데이터/권한·검증/한계·관련 문서로 재구성했다. 현재 SQL Server 전용 범위, TanStack 결과 표, 다른 DB 자동완성, 연결별 제한 쓰기, 현재 DB 메타데이터의 AI 자동 공유를 실제 코드 기준으로 명시했다.
+- 이전 README의 오래된 개발 전용 쓰기·rowversion 필수 설명을 삭제하고, 실DB/배포 미검증과 로컬 SQL 평문 저장 주의를 구분했다. 동작 코드는 변경하지 않았다.
+- 검증: format/typecheck/lint, unit 397, build, Electron E2E 28 통과/실DB·AI opt-in 8 skip. 기본 integration은 로컬 3 통과/실DB 등 13 skip. README 상대 링크 확인.
