@@ -1,0 +1,8 @@
+packages:
+  - '.'
+allowBuilds:
+  electron: true
+  esbuild: true
+  better-sqlite3: true
+minimumReleaseAgeExclude:
+  - mssql@12.7.13
